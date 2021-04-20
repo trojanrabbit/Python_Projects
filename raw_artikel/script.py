@@ -65,7 +65,7 @@ stop_words_IT = list(set(stopwords.words('italian')))
 #stop_words = stop_words + new_words
 
 # Data-File laden
-raw_data = pd.read_csv('C:/04_Git/Python_Projects/raw_artikel/data/raw_data.csv', sep = ';', usecols=['PROD_EXTERNER_NAME_DE'], encoding='utf-8')
+raw_data = pd.read_csv('data/raw_data.csv', sep = ';', usecols=['PROD_EXTERNER_NAME_DE'], encoding='utf-8')
 raw_data.rename(columns={"PROD_EXTERNER_NAME_DE": "PRODUKT"}, inplace=True)
 # leere Zeilen dropen
 raw_data.dropna(subset = ['PRODUKT'], inplace=True)
@@ -143,3 +143,5 @@ ax.set(title = "Bi-Grame der Produkte",
 plt.setp(ax.get_xticklabels(), rotation = 45)
 #plt.savefig('bigram_'+str(m)+'.png', bbox_inches='tight')
 plt.show()
+
+
