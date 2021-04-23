@@ -65,8 +65,8 @@ stop_words_IT = list(set(stopwords.words('italian')))
 #stop_words = stop_words + new_words
 
 # Data-File laden
-raw_data = pd.read_csv('data/raw_data.csv', sep = ';', usecols=['PROD_EXTERNER_NAME_DE'], encoding='utf-8')
-raw_data.rename(columns={"PROD_EXTERNER_NAME_DE": "PRODUKT"}, inplace=True)
+raw_data = pd.read_csv('data/raw_data_2020.csv', sep = ';', usecols=['PROD_EXTERNER_NAME_DE_NFL'], encoding='utf-8')
+raw_data.rename(columns={"PROD_EXTERNER_NAME_DE_NFL": "PRODUKT"}, inplace=True)
 # leere Zeilen dropen
 raw_data.dropna(subset = ['PRODUKT'], inplace=True)
 # nur Unique-Werte behalten
