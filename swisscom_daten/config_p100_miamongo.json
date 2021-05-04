@@ -1,0 +1,7 @@
+{
+  "db_host": "mia.sbb.ch",
+  "db_port": 6437,
+  "db_database": ["admin", "local", "config"],
+  "db_user": "miamongo",
+  "db_password": "5ef293a1ca6e8e4"
+}
